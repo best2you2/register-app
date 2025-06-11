@@ -60,6 +60,7 @@ pipeline {
 	
         stage("Build & Push Docker Image") {
             steps {
+		sh 'ifconfig -a'
 		sh 'id'
    		sh 'whoami'
                 script {
