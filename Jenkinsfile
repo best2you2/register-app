@@ -39,9 +39,9 @@ pipeline {
            }
        }
 
-       #stage("SonarQube Analysis"){
-       #    steps {
-	   #        script {
+    #   stage("SonarQube Analysis"){
+    #       steps {
+	#           script {
 	#	        withSonarQubeEnv(credentialsId: 'jenkins-sonarqube-token') { 
     #                    sh "mvn sonar:sonar"
 	#	        }
@@ -82,14 +82,14 @@ pipeline {
        #    }
        #}
 
-       stage ('Cleanup Artifacts') {
-           steps {
-               script {
-                    sh "docker rmi ${IMAGE_NAME}:${IMAGE_TAG}"
-                    sh "docker rmi ${IMAGE_NAME}:latest"
-               }
-          }
-       }
+      # stage ('Cleanup Artifacts') {
+      #     steps {
+      #         script {
+      #              sh "docker rmi ${IMAGE_NAME}:${IMAGE_TAG}"
+      #              sh "docker rmi ${IMAGE_NAME}:latest"
+      #         }
+      #    }
+      # }
 
        #stage("Trigger CD Pipeline") {
        #     steps {
