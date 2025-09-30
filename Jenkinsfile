@@ -100,7 +100,7 @@ pipeline {
        } */
     }
 
-    post {
+    /* post {
        failure {
              emailext body: '''${SCRIPT, template="groovy-html.template"}''', 
                       subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Failed", 
@@ -111,5 +111,5 @@ pipeline {
                      subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - Successful", 
                      mimeType: 'text/html',to: "best2you@naver.com"
       }      
-   }
+   } */
 }
